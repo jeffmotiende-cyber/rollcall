@@ -1,0 +1,67 @@
+/* Sovereign Earth Theme */
+
+/* Global Body */
+body {
+  background-color: #F9F7F2;
+  color: #2D2D2D;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Headings */
+h1, h2 {
+  color: #7E9C76;
+}
+
+/* Header & Footer */
+header, footer {
+  background-color: #1A1A1A;
+  color: #F9F7F2;
+}
+
+header a, footer a {
+  color: #F9F7F2;
+  text-decoration: none;
+}
+
+header a:hover, footer a:hover,
+header a.active, footer a.active {
+  color: #C16A3D;
+}
+
+/* Primary Buttons */
+.btn-primary {
+  background-color: #C16A3D;
+  border-color: #C16A3D;
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #A55A32; /* Darkened by 10% */
+  border-color: #A55A32;
+}
+
+/* Secondary Buttons */
+.btn-secondary {
+  border-color: #7E9C76;
+  color: #7E9C76;
+  background-color: transparent;
+}
+
+.btn-secondary:hover {
+  background-color: #7E9C76;
+  color: #FFFFFF;
+}
+
+/* Additional styles for responsiveness and modern look */
+.container {
+  max-width: 1200px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
