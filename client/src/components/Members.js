@@ -22,6 +22,8 @@ const Members = () => {
 
   if (loading) return <Container className="mt-5"><p>Loading...</p></Container>;
 
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
   return (
     <Container className="mt-5">
       <h1 className="text-center mb-4">Our Members</h1>
@@ -30,7 +32,7 @@ const Members = () => {
           <Col key={user._id} md={4} className="mb-4">
             <Card>
               {user.passportPhoto && (
-                <Card.Img variant="top" src={`http://localhost:5000${user.passportPhoto}`} alt="Passport Photo" />
+                <Card.Img variant="top" src={`${API_URL}${user.passportPhoto}`} alt="Passport Photo" />
               )}
               <Card.Body>
                 <Card.Title>{user.name}</Card.Title>
