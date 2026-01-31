@@ -26,7 +26,12 @@ cron.schedule('0 23 * * *', async () => {
 });
 
 // Middleware
-app.use(cors());
+// CORS Configuration
+const corsOptions = {
+  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
@@ -38,7 +43,7 @@ app.use('/api/auth', require('./routes/auth'));
 const PORT = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
-  res.send('Hello from V-Church HQ Nairobi Backend!');
+  res.send('Rollcall Church Management System API');
 });
 
 app.listen(PORT, () => {
