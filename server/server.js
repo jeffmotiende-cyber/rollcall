@@ -28,7 +28,7 @@ cron.schedule('0 23 * * *', async () => {
 // Middleware
 // CORS Configuration
 const corsOptions = {
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: ['http://localhost:3000', process.env.CLIENT_URL].filter(Boolean),
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
